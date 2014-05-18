@@ -1,0 +1,15 @@
+{
+  "name": "Kit",
+  "version": "2.0.0",
+  "description": "Kit is an IRC bot.",
+  "main": "app.js",
+  "dependencies": {
+    "irc": "^0.3.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": ""
+}
