@@ -25,6 +25,9 @@ App.prototype.run = function(client) {
      * Create a req/res pair and dispatch it
      * Should these be called something other than req/res maybe? eh?
      */
+    client.addListener('error', function(e) {
+        console.log('ERROOORRRRR', e);
+    });
     client.on('raw', function(message) {
         var res = new Response(client, message);
         App.prototype.dispatch(message, res);

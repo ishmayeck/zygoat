@@ -21,8 +21,7 @@ app.cmd('time', function (req, res) {
 });
 
 app.msg('PING', function(req, res) {
-    console.log("Ishy the server pinged me!!");
-    console.log(res);
+    res.say('#teste', "Ishy the server pinged me!!");
 });
 
 var client = new irc.Client('irc.ishmayeck.net', 'Kote', {
