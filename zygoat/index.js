@@ -43,7 +43,11 @@ App.prototype.dispatch = function(req, res, index) {
 };
 
 App.prototype.cmd = function() {
-    this.router.add.apply(this.router, arguments);
+    this.router.cmd.apply(this.router, arguments);
+};
+
+App.prototype.msg = function() {
+    this.router.msg.apply(this.router, arguments);
 };
 
 module.exports = function() {
