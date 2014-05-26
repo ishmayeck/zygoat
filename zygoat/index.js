@@ -3,10 +3,6 @@ var Response = require('./response.js');
 
 var App = function() {
     this.router = new Router();
-    var self = this;
-    this.use(function() {
-        self.router.handle.apply(self.router, arguments)
-    });
 };
 
 App.prototype.middleware = [];
@@ -21,12 +17,16 @@ App.prototype.use = function(fn) {
 };
 
 App.prototype.run = function(client) {
+    var self = this;
     /**
      * Create a req/res pair and dispatch it
      * Should these be called something other than req/res maybe? eh?
      */
     client.addListener('error', function(e) {
         console.log('ERROOORRRRR', e);
+    });
+    this.use(function() {
+        self.router.handle.apply(self.router, arguments)
     });
     client.on('raw', function(message) {
         var res = new Response(client, message);
