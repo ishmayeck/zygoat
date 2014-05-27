@@ -1,5 +1,5 @@
-var Router = require('./router.js');
-var Response = require('./response.js');
+var Router = require('./lib/router.js');
+var Response = require('./lib/response.js');
 
 var App = function() {
     this.router = new Router();
