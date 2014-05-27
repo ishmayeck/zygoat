@@ -1,4 +1,5 @@
 var Router = require('./lib/router.js');
+var Request = require('./lib/request.js');
 var Response = require('./lib/response.js');
 
 var App = function() {
@@ -29,8 +30,9 @@ App.prototype.run = function(client) {
         self.router.handle.apply(self.router, arguments)
     });
     client.on('raw', function(message) {
+        var req = new Request(client, message);
         var res = new Response(client, message);
-        App.prototype.dispatch(message, res);
+        App.prototype.dispatch(req, res);
     });
 };
 
