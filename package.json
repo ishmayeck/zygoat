@@ -1,15 +1,14 @@
 {
-  "name": "Kit",
-  "version": "2.0.0",
-  "description": "Kit is an IRC bot.",
-  "main": "app.js",
-  "dependencies": {
-    "irc": "^0.3.6"
-  },
-  "devDependencies": {},
+  "name": "zygoat",
+  "version": "0.0.1",
+  "description": "A vaguely Express-like IRC bot framework",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": ""
+  "keywords": [
+    "irc"
+  ],
+  "author": "Mikhail Novikov <ishmayeck@ishmayeck.com>",
+  "license": "MIT"
 }
