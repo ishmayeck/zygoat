@@ -10,5 +10,9 @@
     "irc"
   ],
   "author": "Mikhail Novikov <ishmayeck@ishmayeck.com>",
-  "license": "MIT"
+  "repository": "https://github.com/ishmayeck/zygoat",
+  "license": "MIT",
+  "optionalDependencies": {
+    "slate-irc": "^0.8.0"
+  }
 }
