@@ -1,6 +1,6 @@
 {
   "name": "zygoat",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A vaguely Express-like IRC bot framework",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,10 @@
   "repository": "https://github.com/ishmayeck/zygoat",
   "license": "MIT",
   "optionalDependencies": {
+    "node-irc": "^0.3.11",
     "slate-irc": "^0.8.0"
+  },
+  "dependencies": {
+    "irc-colors": "^1.1.0"
   }
 }
